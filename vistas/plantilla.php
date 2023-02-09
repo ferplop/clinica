@@ -165,8 +165,16 @@
 
 	<div class="wrapper">
 
+    <?php
+     
+     include "cabecera.php";
+
+     include "menu.php";
+
+     include "contenido.php";
+
+    ?>
 		
-		<!-- End Custom template -->
 	</div>
 	
 </body>
