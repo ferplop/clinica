@@ -1,4 +1,4 @@
-<div class="main-header">
+<div class="main-heder">
 			<!-- Logo Header -->
 			<div class="logo-header" data-background-color="blue">
 				

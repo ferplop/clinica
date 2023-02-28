@@ -1,12 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
 
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<title>Medicsystem</title>
 	<meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />
 	<link rel="icon" href="vistas/assets/img/logo.png" type="image/x-icon"/>
-
 	<!-- Fonts and icons -->
 	<script src="vistas/assets/js/plugin/webfont/webfont.min.js"></script>
 	<script>
@@ -20,8 +19,8 @@
 	</script>
 
 	<!-- CSS Files -->
-	<link rel="stylesheet" href="vistas/assets/css/bootstrap.min.css">
-	<link rel="stylesheet" href="vistas/assets/css/atlantis.min.css">
+		<link rel="stylesheet" href="vistas/assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="vistas/assets/css/atlantis.css">
 
 	<!-- CSS Just for demo purpose, don't include it in your project -->
 	<link rel="stylesheet" href="vistas/assets/css/demo.css">
@@ -51,7 +50,7 @@
 	<script src="vistas/assets/js/plugin/datatables/datatables.min.js"></script>
 
 	<!-- Bootstrap Notify -->
-	
+	<script src="vistas/assets/js/sweetalert.min.js"></script>
 
 	<!-- jQuery Vector Maps -->
 	<script src="vistas/assets/js/plugin/jqvmap/jquery.vmap.min.js"></script>
@@ -168,11 +167,10 @@
     <?php
      
      include "cabecera.php";
+	 include "menu.php";
+	 include "contenido.php";
 
-     include "menu.php";
-
-     include "contenido.php";
-
+	
     ?>
 		
 	</div>
