@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-	<title>Medicsystem</title>
+	<title>CLINICAS</title>
 	<meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />
 	<link rel="icon" href="vistas/assets/img/logo.png" type="image/x-icon"/>
 	<!-- Fonts and icons -->
@@ -17,51 +16,36 @@
 			}
 		});
 	</script>
-
 	<!-- CSS Files -->
-		<link rel="stylesheet" href="vistas/assets/css/bootstrap.min.css">
-	<link rel="stylesheet" href="vistas/assets/css/atlantis.css">
-
+	<link rel="stylesheet" href="vistas/assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="vistas/assets/css/atlantis.min.css">
 	<!-- CSS Just for demo purpose, don't include it in your project -->
 	<link rel="stylesheet" href="vistas/assets/css/demo.css">
-    <!--   Core JS Files   -->
+	<!--   Core JS Files   -->
 	<script src="vistas/assets/js/core/jquery.3.2.1.min.js"></script>
 	<script src="vistas/assets/js/core/popper.min.js"></script>
 	<script src="vistas/assets/js/core/bootstrap.min.js"></script>
-
 	<!-- jQuery UI -->
 	<script src="vistas/assets/js/plugin/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
 	<script src="vistas/assets/js/plugin/jquery-ui-touch-punch/jquery.ui.touch-punch.min.js"></script>
-
 	<!-- jQuery Scrollbar -->
 	<script src="vistas/assets/js/plugin/jquery-scrollbar/jquery.scrollbar.min.js"></script>
-
-
 	<!-- Chart JS -->
 	<script src="vistas/assets/js/plugin/chart.js/chart.min.js"></script>
-
 	<!-- jQuery Sparkline -->
 	<script src="vistas/assets/js/plugin/jquery.sparkline/jquery.sparkline.min.js"></script>
-
 	<!-- Chart Circle -->
 	<script src="vistas/assets/js/plugin/chart-circle/circles.min.js"></script>
-
 	<!-- Datatables -->
 	<script src="vistas/assets/js/plugin/datatables/datatables.min.js"></script>
-
 	<!-- Bootstrap Notify -->
-	<script src="vistas/assets/js/sweetalert.min.js"></script>
-
 	<!-- jQuery Vector Maps -->
 	<script src="vistas/assets/js/plugin/jqvmap/jquery.vmap.min.js"></script>
 	<script src="vistas/assets/js/plugin/jqvmap/maps/jquery.vmap.world.js"></script>
-
 	<!-- Sweet Alert -->
 	<script src="vistas/assets/js/plugin/sweetalert/sweetalert.min.js"></script>
-
 	<!-- Atlantis JS -->
 	<script src="vistas/assets/js/atlantis.min.js"></script>
-
 	<!-- Atlantis DEMO methods, don't include it in your project! -->
 	<script src="vistas/assets/js/setting-demo.js"></script>
 	<script src="vistas/assets/js/demo.js"></script>
@@ -80,7 +64,6 @@
 			styleWrapper:true,
 			styleText:true
 		})
-
 		Circles.create({
 			id:'circles-2',
 			radius:45,
@@ -95,7 +78,6 @@
 			styleWrapper:true,
 			styleText:true
 		})
-
 		Circles.create({
 			id:'circles-3',
 			radius:45,
@@ -110,9 +92,7 @@
 			styleWrapper:true,
 			styleText:true
 		})
-
 		var totalIncomeChart = document.getElementById('totalIncomeChart').getContext('2d');
-
 		var mytotalIncomeChart = new Chart(totalIncomeChart, {
 			type: 'bar',
 			data: {
@@ -149,7 +129,6 @@
 				},
 			}
 		});
-
 		$('#lineChart').sparkline([105,103,123,100,95,105,115], {
 			type: 'line',
 			height: '70',
@@ -161,19 +140,10 @@
 	</script>
 </head>
 <body>
-
-	<div class="wrapper">
-
-    <?php
-     
-     include "cabecera.php";
-	 include "menu.php";
-	 include "contenido.php";
-
-	
-    ?>
-		
-	</div>
-	
+	<?php
+		include "modulos/cabecera.php";
+		include "modulos/menu.php";
+		include "modulos/inicio.php";
+	?>		
 </body>
 </html>

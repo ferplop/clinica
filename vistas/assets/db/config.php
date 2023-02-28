@@ -4,8 +4,8 @@ session_start();
 // Define database
 define('dbhost', 'localhost');
 define('dbuser', 'root');
-define('dbpass', 'Mega6609058aa');
-define('dbname', 'cita');
+define('dbpass', '');
+define('dbname', 'proyecto_final');
 
 // Connecting database
 try {

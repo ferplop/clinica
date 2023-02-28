@@ -1,8 +1,9 @@
-<div class="main-heder">
+<div class="wrapper">
+		<div class="main-header">
 			<!-- Logo Header -->
 			<div class="logo-header" data-background-color="blue">
 				
-				<a href="user.php" class="logo">
+				<a href="admin.php" class="logo">
 					<img src="vistas/assets/img/logo.svg" alt="navbar brand" class="navbar-brand">
 				</a>
 				<button class="navbar-toggler sidenav-toggler ml-auto" type="button" data-toggle="collapse" data-target="collapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -41,7 +42,25 @@
 								<i class="fa fa-search"></i>
 							</a>
 						</li>
-						
+						<li class="nav-item dropdown hidden-caret">
+							<a class="nav-link dropdown-toggle" href="#" id="messageDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								<i class="fa fa-envelope"></i>
+							</a>
+							<ul class="dropdown-menu messages-notif-box animated fadeIn" aria-labelledby="messageDropdown">
+								<li>
+									<div class="dropdown-title d-flex justify-content-between align-items-center">
+										Messages 									
+										<a href="#" class="small">Mark all as read</a>
+									</div>
+								</li>
+								<li>
+									
+								</li>
+								<li>
+									<a class="see-all" href="javascript:void(0);">See all messages<i class="fa fa-angle-right"></i> </a>
+								</li>
+							</ul>
+						</li>
 						<li class="nav-item dropdown hidden-caret">
 							<a class="nav-link dropdown-toggle" href="#" id="notifDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 								<i class="fa fa-bell"></i>
@@ -60,8 +79,7 @@
 								</li>
 							</ul>
 						</li>
-
-
+						
 						<li class="nav-item dropdown hidden-caret">
 							<a class="dropdown-toggle profile-pic" data-toggle="dropdown" href="#" aria-expanded="false">
 								<div class="avatar-sm">
@@ -75,8 +93,8 @@
 										
 											<div class="avatar-lg"><img src="vistas/assets/img/mujer.png" alt="image profile" class="avatar-img rounded"></div>
 											<div class="u-text">
-												<h4></h4>
-												<p class="text-muted">Customers</p>
+												<h4><?php echo ucfirst($_SESSION['nombre']); ?></h4>
+												<p class="text-muted">Administrador</p><a href="profile.html" class="btn btn-xs btn-secondary btn-sm">View Profile</a>
 											</div>
 										</div>
 									</li>
