@@ -138,12 +138,15 @@
 			fillColor: 'rgba(255, 165, 52, .14)'
 		});
 	</script>
+	<script src="assets/js/jquery.js"></script>
+    <script src="assets/js/sweetalert.min.js"></script>
 </head>
 <body>
 	<?php
-		include "modulos/cabecera.php";
-		include "modulos/menu.php";
-		include "modulos/inicio.php";
+		//include "modulos/cabecera.php";
+		//include "modulos/menu.php";
+		//include "modulos/inicio.php";
+		include "modulos/login.php";
 	?>		
 </body>
 </html>
