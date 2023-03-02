@@ -36,6 +36,7 @@
                                         <th style="width:10px">#</th>
                                         <th>Nombre</th>
                                         <th>Usuario</th>
+                                        <th>Foto</th>
                                         <th>email</th>
                                         <th>Cargo</th>
                                         <th>Estado</th>
@@ -56,8 +57,13 @@
                                         echo ' <tr>
                                                 <td>'.($key+1).'</td>
                                                 <td>'.$value["nombre"].'</td>
-                                                <td>'.$value["usuario"].'</td>;
-                                                <td>'.$value["email"].'</td>;
+                                                <td>'.$value["usuario"].'</td>;';
+                                                if ($value["foto"] != ""){
+                                                    echo '<td><img src="'.$value["foto"].'" class="img-thumbnail" width="40px"></td>';
+                                                    }else{
+                                                    echo '<td><img src="vistas/assets/img/mujer.png" class="img-thumbnail" width="40px"></td>';
+                                                  }
+                                        echo'   <td>'.$value["email"].'</td>;
                                                 <td>'.$value["cargo"].'</td>';
                                                 if($value["estado"] != 0){
 
@@ -77,6 +83,7 @@
                                         }
                                         ?> 
                                     </tbody>
+                                    <?php include "usuarios/modificarusuario.php"; ?>
                                 </div>
                             </div>
                         </div>
@@ -86,3 +93,4 @@
         </div>
     </div>
 </div>
+
