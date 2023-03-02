@@ -39,7 +39,7 @@
 					</div>
 					<ul class="nav nav-primary">
 						<li class="nav-item active">
-							<a data-toggle="collapse" href="#dashboard" class="collapsed" aria-expanded="false">
+							<a data-toggle="collapse" href="inicio" class="collapsed" aria-expanded="false">
 								<i class="fas fa-home"></i>
 								<p>Home</p>
 								<span class="caret"></span>
@@ -143,7 +143,7 @@
 							<div class="collapse" id="user">
 								<ul class="nav nav-collapse">
 									<li>
-										<a href="../../folder/usuarios.php">
+										<a href="usuarios">
 											<span class="sub-item">Mostrar</span>
 										</a>
 									</li>

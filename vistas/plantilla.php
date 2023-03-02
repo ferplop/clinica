@@ -1,3 +1,6 @@
+<?php
+	session_start();
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -143,10 +146,26 @@
 </head>
 <body>
 	<?php
-		//include "modulos/cabecera.php";
-		//include "modulos/menu.php";
-		//include "modulos/inicio.php";
+	if(isset($_SESSION["iniciarSesion"]) && $_SESSION["iniciarSesion"] == "ok"){
+		echo '<div class="wrapper">';
+		include "modulos/cabecera.php";
+		include "modulos/menu.php";
+		if(isset($_GET["ruta"])){
+			if($_GET["ruta"] == "inicio" ||
+			$_GET["ruta"] == "servidores" ||
+			$_GET["ruta"] == "usuarios" ||
+			$_GET["ruta"] == "salir"){
+				include "modulos/".$_GET["ruta"].".php";
+			}else{
+				include "modulos/404.php";
+			}
+
+		}else{
+			include "modulos/inicio.php";
+		}
+	}else{
 		include "modulos/login.php";
-	?>		
+	}
+	?>
 </body>
 </html>

@@ -21,7 +21,7 @@ class ControladorUsuarios{
 
 				$respuesta = ModeloUsuarios::MdlMostrarUsuarios($tabla, $item, $valor);
 
-				if($respuesta["usuario"] == $_POST["ingUsuario"] && $respuesta["password"] == $encriptar){
+				if($respuesta["usuario"] == $_POST["ingUsuario"] && $respuesta["clave"] == $encriptar){
 
 					if($respuesta["estado"] == 1){
 
@@ -29,8 +29,8 @@ class ControladorUsuarios{
 						$_SESSION["id"] = $respuesta["id"];
 						$_SESSION["nombre"] = $respuesta["nombre"];
 						$_SESSION["usuario"] = $respuesta["usuario"];
-						$_SESSION["foto"] = $respuesta["foto"];
-						$_SESSION["perfil"] = $respuesta["perfil"];
+						$_SESSION["email"] = $respuesta["email"];
+						$_SESSION["cargo"] = $respuesta["cargo"];
 
 						/*=============================================
 						REGISTRAR FECHA PARA SABER EL ÚLTIMO LOGIN

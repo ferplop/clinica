@@ -3,7 +3,7 @@
 			<!-- Logo Header -->
 			<div class="logo-header" data-background-color="blue">
 				
-				<a href="admin.php" class="logo">
+				<a href="inicio" class="logo">
 					<img src="vistas/assets/img/logo.svg" alt="navbar brand" class="navbar-brand">
 				</a>
 				<button class="navbar-toggler sidenav-toggler ml-auto" type="button" data-toggle="collapse" data-target="collapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -103,7 +103,7 @@
 										<a class="dropdown-item" href="#">My Profile</a>
 										
 										<div class="dropdown-divider"></div>
-										<a class="dropdown-item" href="vistas/cerrarSesion.php">Logout</a>
+										<a class="dropdown-item" href="salir">Logout</a>
 									</li>
 								</div>
 							</ul>
