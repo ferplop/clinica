@@ -26,6 +26,7 @@
 	<link rel="stylesheet" href="vistas/assets/css/demo.css">
 	<!--   Core JS Files   -->
 	<script src="vistas/assets/js/core/jquery.3.2.1.min.js"></script>
+	<script src="vistas/assets/js/usuarios.js"></script>
 	<script src="vistas/assets/js/core/popper.min.js"></script>
 	<script src="vistas/assets/js/core/bootstrap.min.js"></script>
 	<!-- jQuery UI -->
@@ -116,7 +117,7 @@
 				scales: {
 					yAxes: [{
 						ticks: {
-							display: false //this will remove only the label
+							display: false 
 						},
 						gridLines : {
 							drawBorder: false,

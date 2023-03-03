@@ -42,6 +42,12 @@
 								        <input name="ingPassword" type="password" class="form-control" required placeholder="Ingrese contraseña">
 							        </div>
 						        </div>
+								<div class="form-group form-group-default">
+              						<div class="panel">SUBIR FOTO</div>
+              						<input type="file" class="nuevaFoto" name="nuevaFoto">
+									<p class="help-block">Peso máximo de la foto 2MB</p>
+              						<img src="vistas/assets/img/mujer.png" alt="..." width="50">
+            					</div>
 						    </div>
 		                        <div class="modal-footer">
                                     <button type="button" class="btn btn-default" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Cancelar</button>

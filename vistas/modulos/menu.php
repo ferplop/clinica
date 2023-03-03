@@ -4,7 +4,13 @@
 				<div class="sidebar-content">
 					<div class="user">
 						<div class="avatar-sm float-left mr-2">
-							<img src="vistas/assets/img/mujer.png" alt="..." class="avatar-img rounded-circle">
+						<?php
+								if ($_SESSION["foto"] != ""){
+                                    echo '<td><img src="'.$_SESSION["foto"].'"alt="..." class="avatar-img rounded-circle">';
+                                }else{
+                                    echo '<img src="vistas/assets/img/mujer.png" alt="..." class="avatar-img rounded-circle">';
+                                }
+							?>
 						</div>
 						<div class="info">
 							<a data-toggle="collapse" href="#collapseExample" aria-expanded="true">
@@ -39,7 +45,7 @@
 					</div>
 					<ul class="nav nav-primary">
 						<li class="nav-item active">
-							<a data-toggle="collapse" href="inicio" class="collapsed" aria-expanded="false">
+							<a data-toggle="collapse" href="#dashboard" class="collapsed" aria-expanded="false">
 								<i class="fas fa-home"></i>
 								<p>Home</p>
 								<span class="caret"></span>

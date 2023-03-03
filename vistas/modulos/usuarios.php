@@ -83,7 +83,10 @@
                                         }
                                         ?> 
                                     </tbody>
-                                    <?php include "usuarios/modificarusuario.php"; ?>
+                                    <?php include "usuarios/modificarusuario.php"; 
+                                    $borrarUsuario = new ControladorUsuarios();
+                                    $borrarUsuario -> ctrBorrarUsuario();
+                                    ?>
                                 </div>
                             </div>
                         </div>
