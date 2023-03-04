@@ -13,19 +13,19 @@
 						        <div class="col-md-6 pr-0">
 							        <div class="form-group form-group-default">
 								        <label>Nombre</label>
-								        <input name="ingNombre" type="text" class="form-control" required placeholder="Ingrese nombre">
+								        <input name="nuevoNombre" type="text" class="form-control" required placeholder="Ingrese nombre">
 							        </div>
 						        </div>
 						        <div class="col-md-6">
 							        <div class="form-group form-group-default">
 							        	<label>Usuario</label>
-								        <input name="ingUsuario" type="text" class="form-control" required placeholder="Ingrese usuario">
+								        <input name="nuevoUsuario" type="text" class="form-control" required placeholder="Ingrese usuario">
 							        </div>
 					        	</div>
 						        <div class="col-md-6">
 							        <div class="form-group form-group-default">
 							        	<label>Cargo</label>
-								        <select class="form-control" name="ingCargo">
+								        <select class="form-control" name="nuevoCargo">
 				                            <option value="1">Administrador</option>
 			                            </select>
 						        	</div>
@@ -33,13 +33,13 @@
 						        <div class="col-md-6">
 							        <div class="form-group form-group-default">
 								        <label>Correo</label>
-								        <input name="ingEmail" type="text" class="form-control" required placeholder="Ingrese correo">
+								        <input name="nuevoEmail" type="text" class="form-control" required placeholder="Ingrese correo">
 							        </div>
 						        </div>
 						        <div class="col-md-6">
 							        <div class="form-group form-group-default">
 								        <label>Password</label>
-								        <input name="ingPassword" type="password" class="form-control" required placeholder="Ingrese contraseña">
+								        <input name="nuevoPassword" type="password" class="form-control" required placeholder="Ingrese contraseña">
 							        </div>
 						        </div>
 								<div class="form-group form-group-default">
@@ -54,11 +54,16 @@
                                     <button type="submit" name="agregar" class="btn btn-primary"><span class="glyphicon glyphicon-floppy-disk"></span> Guardar Registro</button>
                                 </div>
                             </div>
+							<?php
+         						$crearUsuario = new ControladorUsuarios();
+          						$crearUsuario -> ctrCrearUsuario();
+       	 					?>
                         </form>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
 </div>
 <!-- -->

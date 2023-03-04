@@ -48,10 +48,6 @@ class ControladorUsuarios{
 
 		}
 	
-	/*=============================================
-	REGISTRO DE USUARIO
-	=============================================*/
-
 	static public function ctrCrearUsuario(){
 
 		if(isset($_POST["nuevoUsuario"])){
@@ -60,11 +56,7 @@ class ControladorUsuarios{
 			   preg_match('/^[a-zA-Z0-9]+$/', $_POST["nuevoUsuario"]) &&
 			   preg_match('/^[a-zA-Z0-9]+$/', $_POST["nuevoPassword"])){
 
-			   	/*=============================================
-				VALIDAR IMAGEN
-				=============================================*/
-
-				$ruta = "";
+			   	$ruta = "";
 
 				if(isset($_FILES["nuevaFoto"]["tmp_name"])){
 
@@ -73,23 +65,13 @@ class ControladorUsuarios{
 					$nuevoAncho = 500;
 					$nuevoAlto = 500;
 
-					/*=============================================
-					CREAMOS EL DIRECTORIO DONDE VAMOS A GUARDAR LA FOTO DEL USUARIO
-					=============================================*/
-
 					$directorio = "vistas/assets/img/usuarios/".$_POST["nuevoUsuario"];
 
 					mkdir($directorio, 0755);
 
-					/*=============================================
-					DE ACUERDO AL TIPO DE IMAGEN APLICAMOS LAS FUNCIONES POR DEFECTO DE PHP
-					=============================================*/
 
 					if($_FILES["nuevaFoto"]["type"] == "image/jpeg"){
 
-						/*=============================================
-						GUARDAMOS LA IMAGEN EN EL DIRECTORIO
-						=============================================*/
 
 						$aleatorio = mt_rand(100,999);
 
@@ -106,10 +88,6 @@ class ControladorUsuarios{
 					}
 
 					if($_FILES["nuevaFoto"]["type"] == "image/png"){
-
-						/*=============================================
-						GUARDAMOS LA IMAGEN EN EL DIRECTORIO
-						=============================================*/
 
 						$aleatorio = mt_rand(100,999);
 
@@ -133,8 +111,8 @@ class ControladorUsuarios{
 
 				$datos = array("nombre" => $_POST["nuevoNombre"],
 					           "usuario" => $_POST["nuevoUsuario"],
-					           "password" => $encriptar,
-					           "perfil" => $_POST["nuevoPerfil"],
+					           "clave" => $encriptar,
+					           "email" => $_POST["nuevoEmail"],
 							   "cargo" => $_POST["nuevoCargo"],
 					           "foto"=>$ruta);
 
@@ -167,7 +145,6 @@ class ControladorUsuarios{
 
 				}	
 
-
 			}else{
 
 				echo '<script>
@@ -199,10 +176,6 @@ class ControladorUsuarios{
 
 
 	}
-
-	/*=============================================
-	MOSTRAR USUARIO
-	=============================================*/
 
 	static public function ctrMostrarUsuarios($item, $valor){
 
