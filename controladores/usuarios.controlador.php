@@ -122,7 +122,7 @@ class ControladorUsuarios{
 
 					echo '<script>
 
-					swal({
+					swal.fire({
 
 						type: "success",
 						title: "¡El usuario ha sido guardado correctamente!",
