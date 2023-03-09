@@ -25,9 +25,9 @@
 	<!-- CSS Just for demo purpose, don't include it in your project -->
 	<link rel="stylesheet" href="vistas/assets/css/demo.css">
 	<!-- SweetAlert 2 -->
-	<<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-   <!-- By default SweetAlert2 doesn't support IE. To enable IE 11 support, include Promise polyfill:-->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/core-js/2.4.1/core.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  	<!-- By default SweetAlert2 doesn't support IE. To enable IE 11 support, include Promise polyfill:-->
+ 	<script src="https://cdnjs.cloudflare.com/ajax/libs/core-js/2.4.1/core.js"></script>
 	<!--   Core JS Files   -->
 	<script src="vistas/assets/js/core/jquery.3.2.1.min.js"></script>
 	<script src="vistas/assets/js/usuarios.js"></script>

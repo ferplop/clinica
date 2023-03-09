@@ -324,7 +324,7 @@ class ControladorUsuarios{
 
 					echo'<script>
 
-					swal({
+					swal.fire({
 						  type: "success",
 						  title: "El usuario ha sido editado correctamente",
 						  showConfirmButton: true,
@@ -346,7 +346,7 @@ class ControladorUsuarios{
 
 				echo'<script>
 
-					swal({
+					swal.fire({
 						  type: "error",
 						  title: "¡El nombre no puede ir vacío o llevar caracteres especiales!",
 						  showConfirmButton: true,
