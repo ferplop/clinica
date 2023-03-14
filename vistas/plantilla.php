@@ -30,7 +30,6 @@
   	<script src="https://cdnjs.cloudflare.com/ajax/libs/core-js/2.4.1/core.js"></script>
 	<!--   Core JS Files   -->
 	<script src="vistas/assets/js/core/jquery.3.2.1.min.js"></script>
-	<script src="vistas/assets/js/usuarios.js"></script>
 	<script src="vistas/assets/js/core/popper.min.js"></script>
 	<script src="vistas/assets/js/core/bootstrap.min.js"></script>
 	<!-- jQuery UI -->
@@ -156,7 +155,6 @@
 		include "modulos/menu.php";
 		if(isset($_GET["ruta"])){
 			if($_GET["ruta"] == "inicio" ||
-			$_GET["ruta"] == "servidores" ||
 			$_GET["ruta"] == "usuarios" ||
 			$_GET["ruta"] == "salir"){
 				include "modulos/".$_GET["ruta"].".php";
@@ -171,5 +169,6 @@
 		include "modulos/login.php";
 	}
 	?>
+	<script src="vistas/assets/js/usuarios.js"></script>
 </body>
 </html>

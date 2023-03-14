@@ -75,7 +75,7 @@ class ControladorUsuarios{
 
 						$aleatorio = mt_rand(100,999);
 
-						$ruta = "vistas/img/usuarios/".$_POST["nuevoUsuario"]."/".$aleatorio.".jpg";
+						$ruta = "vistas/assets/img/usuarios/".$_POST["nuevoUsuario"]."/".$aleatorio.".jpg";
 
 						$origen = imagecreatefromjpeg($_FILES["nuevaFoto"]["tmp_name"]);						
 
@@ -91,7 +91,7 @@ class ControladorUsuarios{
 
 						$aleatorio = mt_rand(100,999);
 
-						$ruta = "vistas/img/usuarios/".$_POST["nuevoUsuario"]."/".$aleatorio.".png";
+						$ruta = "vistas/assets/img/usuarios/".$_POST["nuevoUsuario"]."/".$aleatorio.".png";
 
 						$origen = imagecreatefrompng($_FILES["nuevaFoto"]["tmp_name"]);						
 
@@ -151,7 +151,7 @@ class ControladorUsuarios{
 
 					swal({
 
-						type: "error",
+						icons: "error",
 						title: "¡El usuario no puede ir vacío o llevar caracteres especiales!",
 						showConfirmButton: true,
 						confirmButtonText: "Cerrar"
@@ -186,19 +186,11 @@ class ControladorUsuarios{
 		return $respuesta;
 	}
 
-	/*=============================================
-	EDITAR USUARIO
-	=============================================*/
-
 	static public function ctrEditarUsuario(){
 
 		if(isset($_POST["editarUsuario"])){
 
 			if(preg_match('/^[a-zA-Z0-9ñÑáéíóúÁÉÍÓÚ ]+$/', $_POST["editarNombre"])){
-
-				/*=============================================
-				VALIDAR IMAGEN
-				=============================================*/
 
 				$ruta = $_POST["fotoActual"];
 
@@ -209,15 +201,7 @@ class ControladorUsuarios{
 					$nuevoAncho = 500;
 					$nuevoAlto = 500;
 
-					/*=============================================
-					CREAMOS EL DIRECTORIO DONDE VAMOS A GUARDAR LA FOTO DEL USUARIO
-					=============================================*/
-
-					$directorio = "vistas/img/usuarios/".$_POST["editarUsuario"];
-
-					/*=============================================
-					PRIMERO PREGUNTAMOS SI EXISTE OTRA IMAGEN EN LA BD
-					=============================================*/
+					$directorio = "vistas/assets/img/usuarios/".$_POST["editarUsuario"];
 
 					if(!empty($_POST["fotoActual"])){
 
@@ -229,19 +213,11 @@ class ControladorUsuarios{
 
 					}	
 
-					/*=============================================
-					DE ACUERDO AL TIPO DE IMAGEN APLICAMOS LAS FUNCIONES POR DEFECTO DE PHP
-					=============================================*/
-
 					if($_FILES["editarFoto"]["type"] == "image/jpeg"){
-
-						/*=============================================
-						GUARDAMOS LA IMAGEN EN EL DIRECTORIO
-						=============================================*/
 
 						$aleatorio = mt_rand(100,999);
 
-						$ruta = "vistas/img/usuarios/".$_POST["editarUsuario"]."/".$aleatorio.".jpg";
+						$ruta = "vistas/assets/img/usuarios/".$_POST["editarUsuario"]."/".$aleatorio.".jpg";
 
 						$origen = imagecreatefromjpeg($_FILES["editarFoto"]["tmp_name"]);						
 
@@ -255,13 +231,9 @@ class ControladorUsuarios{
 
 					if($_FILES["editarFoto"]["type"] == "image/png"){
 
-						/*=============================================
-						GUARDAMOS LA IMAGEN EN EL DIRECTORIO
-						=============================================*/
-
 						$aleatorio = mt_rand(100,999);
 
-						$ruta = "vistas/img/usuarios/".$_POST["editarUsuario"]."/".$aleatorio.".png";
+						$ruta = "vistas/assets/img/usuarios/".$_POST["editarUsuario"]."/".$aleatorio.".png";
 
 						$origen = imagecreatefrompng($_FILES["editarFoto"]["tmp_name"]);						
 
@@ -313,10 +285,13 @@ class ControladorUsuarios{
 				}
 
 				$datos = array("nombre" => $_POST["editarNombre"],
-							   "usuario" => $_POST["editarUsuario"],
+							   "clave" => $encriptar,
+							   "email" => $_POST["editarEmail"],
+							   "cargo" => $_POST["editarCargo"],
 							   "password" => $encriptar,
 							   "perfil" => $_POST["editarPerfil"],
-							   "foto" => $ruta);
+							   "foto" => $ruta,
+							   "usuario" => $_POST["editarUsuario"],);
 
 				$respuesta = ModeloUsuarios::mdlEditarUsuario($tabla, $datos);
 
@@ -325,7 +300,7 @@ class ControladorUsuarios{
 					echo'<script>
 
 					swal.fire({
-						  type: "success",
+						  icon: "success",
 						  title: "El usuario ha sido editado correctamente",
 						  showConfirmButton: true,
 						  confirmButtonText: "Cerrar"

@@ -13,6 +13,12 @@
 				<form  method="POST">			
 				    <input class="form-control" name="id" type="hidden" value="">
 					    <div class="row">
+						<div class="col-md-6 pr-0">
+							    <div class="form-group form-group-default">
+								    <label>Usuario</label>
+								    <input name="editarUsuario" value="" type="text" class="form-control" readonly>
+							    </div>
+						    </div>
 						    <div class="col-md-6 pr-0">
 							    <div class="form-group form-group-default">
 								    <label>Nombre</label>
@@ -21,8 +27,14 @@
 						    </div>
 						    <div class="col-md-6">
 							    <div class="form-group form-group-default">
-								    <label>Usuario</label>
-								    <input name="editarUsuario" value="" type="text" class="form-control" required placeholder="Ingrese usuario">
+								    <label>Password</label>
+								    <input name="editarPassword" value="" type="password" class="form-control" required placeholder="Ingrese Password">
+							    </div>
+						    </div>
+							<div class="col-md-6 pr-0">
+							    <div class="form-group form-group-default">
+								    <label>Email</label>
+								    <input name="editarEmail" value="" type="text" class="form-control" required placeholder="Ingrese Email">
 							    </div>
 						    </div>
 						    <div class="col-md-6">
@@ -33,16 +45,19 @@
 			                        </select>
 						    	</div>
 						    </div>
-						    <div class="col-md-6">
-							    <div class="form-group form-group-default">
-								    <label>Correo</label>
-								    <input name="editarEmail" value="" type="text" class="form-control" required placeholder="Ingrese correo">
-							    </div>
-						    </div>
-					    </div>
+						    <div class="form-group">              
+              					<div class="form-group form-group-default">SUBIR FOTO</div>
+              						<input type="file" class="nuevaFoto" name="editarFoto">
+              						<p class="help-block">Peso máximo de la foto 2MB</p>
+              						<img src="vistas/assets/img/mujer.png" class="img-thumbnail previsualizarEditar" width="100px">
+              						<input type="hidden" name="fotoActual" id="fotoActual">
+
+            
+					    	</div>
+						</div>
 				        <div class="modal-footer no-bd">
-					        <button type="submit" name="editar" class="btn btn-primary">Edit</button>
-				            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+					        <button type="submit" name="editar" class="btn btn-primary">Editar</button>
+				            <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
 				        </div>
 			    </form>
 		    </div>

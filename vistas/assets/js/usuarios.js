@@ -84,7 +84,7 @@ $(".tablas").on("click", ".btnEditarUsuario", function(){
 
 			}else{
 
-				$(".previsualizarEditar").attr("src", "vistas/img/usuarios/default/anonymous.png");
+				$(".previsualizarEditar").attr("src", "vistas/assets/img/mujer.png");
 
 			}
 
