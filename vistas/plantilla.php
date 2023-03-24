@@ -26,6 +26,9 @@
 	<link rel="stylesheet" href="vistas/assets/css/demo.css">
 	<!-- SweetAlert 2 -->
 	<script src="vistas/plugins/sweetalert2/sweetalert2.all.js"></script>
+	<link rel="stylesheet" href="vistas/plugins/font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="vistas/plugins/Ionicons/css/ionicons.min.css">
+	<script src="vistas/plugins/fastclick/lib/fastclick.js"></script>
     <!-- By default SweetAlert2 doesn't support IE. To enable IE 11 support, include Promise polyfill:-->
   	<script src="https://cdnjs.cloudflare.com/ajax/libs/core-js/2.4.1/core.js"></script>
 	<!--   Core JS Files   -->
@@ -63,7 +66,7 @@
 			value:60,
 			maxValue:100,
 			width:7,
-			text: <?php echo  $total; ?>,
+			text:'',
 			colors:['#f1f1f1', '#FF9E27'],
 			duration:400,
 			wrpClass:'circles-wrp',
@@ -77,7 +80,7 @@
 			value:70,
 			maxValue:100,
 			width:7,
-			text: <?php echo  $total2; ?>,
+			text: '',
 			colors:['#f1f1f1', '#2BB930'],
 			duration:400,
 			wrpClass:'circles-wrp',
@@ -91,7 +94,7 @@
 			value:40,
 			maxValue:100,
 			width:7,
-			text: <?php echo  $total3; ?>,
+			text: '',
 			colors:['#f1f1f1', '#F25961'],
 			duration:400,
 			wrpClass:'circles-wrp',

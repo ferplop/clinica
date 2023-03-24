@@ -122,7 +122,7 @@ class ControladorUsuarios{
 
 					echo '<script>
 
-					swal({
+					Swal.fire({
 						
 						icon: "success",
 						title: "¡El usuario ha sido guardado correctamente!",
@@ -149,7 +149,7 @@ class ControladorUsuarios{
 
 				echo '<script>
 
-					swal({
+					Swal.fire({
 
 						icons: "error",
 						title: "¡El usuario no puede ir vacío o llevar caracteres especiales!",
@@ -259,7 +259,7 @@ class ControladorUsuarios{
 
 						echo'<script>
 
-								swal({
+								Swal.fire({
 									  type: "error",
 									  title: "¡La contraseña no puede ir vacía o llevar caracteres especiales!",
 									  showConfirmButton: true,
@@ -289,7 +289,6 @@ class ControladorUsuarios{
 							   "email" => $_POST["editarEmail"],
 							   "cargo" => $_POST["editarCargo"],
 							   "password" => $encriptar,
-							   "perfil" => $_POST["editarPerfil"],
 							   "foto" => $ruta,
 							   "usuario" => $_POST["editarUsuario"],);
 
@@ -299,7 +298,7 @@ class ControladorUsuarios{
 
 					echo'<script>
 
-					swal.fire({
+					Swal.fire({
 						  icon: "success",
 						  title: "El usuario ha sido editado correctamente",
 						  showConfirmButton: true,
@@ -321,7 +320,7 @@ class ControladorUsuarios{
 
 				echo'<script>
 
-					swal.fire({
+					Swal.fire({
 						  type: "error",
 						  title: "¡El nombre no puede ir vacío o llevar caracteres especiales!",
 						  showConfirmButton: true,
@@ -366,8 +365,8 @@ class ControladorUsuarios{
 
 				echo'<script>
 
-				swal({
-					  type: "success",
+				Swal.fire({
+					  icon: "success",
 					  title: "El usuario ha sido borrado correctamente",
 					  showConfirmButton: true,
 					  confirmButtonText: "Cerrar",

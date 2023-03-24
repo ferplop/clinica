@@ -29,7 +29,7 @@
                             <div class="card-tools">		
                             </div>
                             <div class="card-body">								
-                                <div class="tablatable-responsive">
+                                <div class="tabla table-responsive">
                                     <table id="add-row" class="display table table-striped table-hover" >
                                     <thead>
                                         <tr>
@@ -75,7 +75,7 @@
                                                 echo '<td>'.$value["ultimo_login"].'</td>
                                                 <td>
                                                     <div class="btn-group">
-                                                    <button class="btn btn-warning btnEditarUsuario" idUsuario="'.$value["id"].'" data-toggle="modal" data-target="#modalEditarUsuario"><i class="fa fa-edit"></i></button>
+                                                    <button class="btn btn-warning btnEditarUsuario" data-toggle="modal" data-target="#modalEditarUsuario" idUsuario="'.$value["id"].'"><i class="fa fa-edit"></i></button>
                                                     <button class="btn btn-danger btnEliminarUsuario" idUsuario="'.$value["id"].'" usuario="'.$value["usuario"].'"><i class="fa fa-times"></i></button>
                                                     </div>  
                                                 </td>

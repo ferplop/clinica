@@ -52,7 +52,7 @@ $(".nuevaFoto").change(function(){
 /*=============================================
 EDITAR USUARIO
 =============================================*/
-$(".tablas").on("click", ".btnEditarUsuario", function(){
+$(".tabla").on("click", ".btnEditarUsuario", function(){
 
 	var idUsuario = $(this).attr("idUsuario");
 	
@@ -72,11 +72,12 @@ $(".tablas").on("click", ".btnEditarUsuario", function(){
 			
 			$("#editarNombre").val(respuesta["nombre"]);
 			$("#editarUsuario").val(respuesta["usuario"]);
-			$("#editarPerfil").html(respuesta["perfil"]);
-			$("#editarPerfil").val(respuesta["perfil"]);
+			$("#editarEmail").val(respuesta["email"]);
+			$("#editarCargo").html(respuesta["cargo"]);
+			$("#editarCargo").val(respuesta["cargo"]);
 			$("#fotoActual").val(respuesta["foto"]);
 
-			$("#passwordActual").val(respuesta["password"]);
+			$("#passwordActual").val(respuesta["clave"]);
 
 			if(respuesta["foto"] != ""){
 
@@ -97,7 +98,7 @@ $(".tablas").on("click", ".btnEditarUsuario", function(){
 /*=============================================
 ACTIVAR USUARIO
 =============================================*/
-$(".tablas").on("click", ".btnActivar", function(){
+$(".tabla").on("click", ".btnActivar", function(){
 
 	var idUsuario = $(this).attr("idUsuario");
 	var estadoUsuario = $(this).attr("estadoUsuario");
@@ -195,21 +196,21 @@ $("#nuevoUsuario").change(function(){
 /*=============================================
 ELIMINAR USUARIO
 =============================================*/
-$(".tablas").on("click", ".btnEliminarUsuario", function(){
+$(".tabla").on("click", ".btnEliminarUsuario", function(){
 
   var idUsuario = $(this).attr("idUsuario");
   var fotoUsuario = $(this).attr("fotoUsuario");
   var usuario = $(this).attr("usuario");
 
-  swal({
+  Swal.fire({
     title: '¿Está seguro de borrar el usuario?',
     text: "¡Si no lo está puede cancelar la accíón!",
-    type: 'warning',
+    icon: 'warning',
     showCancelButton: true,
-    confirmButtonColor: '#3085d6',
-      cancelButtonColor: '#d33',
-      cancelButtonText: 'Cancelar',
-      confirmButtonText: 'Si, borrar usuario!'
+  	confirmButtonClass: "btn-danger",
+  	confirmButtonText: "Si Borrar, Usuario!",
+	cancelButtonText:"Cerrar",
+  	closeOnConfirm: false
   }).then(function(result){
 
     if(result.value){

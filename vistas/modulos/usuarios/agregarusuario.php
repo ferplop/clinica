@@ -25,7 +25,7 @@
 							        <div class="form-group form-group-default">
 							        	<label>Cargo</label>
 								        <select class="form-control" name="nuevoCargo">
-				                            <option value="1">Administrador</option>
+				                            <option value="Administrador">Administrador</option>
 			                            </select>
 						        	</div>
 					        	</div>
