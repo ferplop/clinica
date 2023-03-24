@@ -83,15 +83,24 @@
 						<li class="nav-item dropdown hidden-caret">
 							<a class="dropdown-toggle profile-pic" data-toggle="dropdown" href="#" aria-expanded="false">
 								<div class="avatar-sm">
-									<img src="vistas/assets/img/mujer.png" alt="..." class="avatar-img rounded-circle">
+									<?php
+										if ($_SESSION["foto"] != ""){
+                                    		echo '<img src="'.$_SESSION["foto"].'" alt="..." class="avatar-img rounded-circle">';
+                                		}else{
+                                    		echo '<img src="vistas/assets/img/mujer.png" alt="..." class="avatar-img rounded-circle">';
+                                		}?>
 								</div>
 							</a>
 							<ul class="dropdown-menu dropdown-user animated fadeIn">
 								<div class="dropdown-user-scroll scrollbar-outer">
 									<li>
 										<div class="user-box">
-										
-											<div class="avatar-lg"><img src="vistas/assets/img/mujer.png" alt="image profile" class="avatar-img rounded"></div>
+											<?php
+											if ($_SESSION["foto"] != ""){
+                                    			echo '<div class="avatar-lg"><img src="'.$_SESSION["foto"].'" alt="image profile" class="avatar-img rounded"></div>';
+                                			}else{
+                                    		echo '<div class="avatar-lg"><img src="vistas/assets/img/mujer.png" alt="image profile" class="avatar-img rounded"></div>';
+                                			}?>
 											<div class="u-text">
 												<h4><?php echo ucfirst($_SESSION['nombre']); ?></h4>
 												<p class="text-muted">Administrador</p><a href="profile.html" class="btn btn-xs btn-secondary btn-sm">View Profile</a>
