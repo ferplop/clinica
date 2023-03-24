@@ -28,7 +28,7 @@
 						    <div class="col-md-6">
 							    <div class="form-group form-group-default">
 								    <label>Password</label>
-								    <input type="password" id="editarPassword" name="editarPassword" value="" class="form-control" required placeholder="Ingrese Password">
+								    <input type="password" id="editarPassword" name="editarPassword" value="" class="form-control" placeholder="Ingrese Password">
 									<input type="hidden" id="passwordActual" name="passwordActual">
 							    </div>
 						    </div>
